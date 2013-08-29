@@ -34,12 +34,17 @@ describe('a function called bigDiff', function() {
 
 describe('a function called averageMedian', function() {
 
-  it('should return the difference between the largest and second largest numbers in an array', function() {
+  it('should return the average of the 2 middle numbers in an array of even length', function() {
     first_array = [2, 6, 9, 11];
     expect(averageMedian(first_array)).toEqual(7.5);
   });
 
-  it('should return that difference even if the array is not in increasing order', function() {
+  it('should return the average of the 3 middle numbers in an array of odd length', function() {
+    second_array = [3, 5, 9, 4, 2];
+    expect(averageMedian(second_array)).toEqual(6);
+  });
+
+  it('should return a number rounded to 2 decimal places', function() {
     second_array = [9, 8, 2, 4, 7];
     expect(averageMedian(second_array)).toEqual(4.67);
   });
